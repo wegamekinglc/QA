@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+<head>
+    <meta charset="UTF-8">
+    <title>cs</title>
+</head>
+<body bgcolor="white">
+    <div style="text-align:center;color:black">
+        <br/><br/><br/>
+        <font face="宋体" size="+5", color="orange">{{ head }}</font><br/>
+        <br/><br/>
+        <form action ='/cs' method='post'>
+            <input type="txt"  rows="4" cols="60" placeholder="{{ hint }}...."
+                   name='query' style="height:38px;width:480px;">
+            <button type="submit" class="search-submit" style="height:35px;width:60px;">提问！</button>
+        </form>
+        <br/><br/>
+        {{ result | safe }}
+    </div>
+</body>
+</html>
